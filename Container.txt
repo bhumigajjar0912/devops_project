@@ -1,0 +1,40 @@
+Hyperviser
+1> hosting
+2>base metal
+
+container
+docker
+
+commands
+>docker version(first command)
+>docker ps
+> docker run (image name)
+>docker images
+>docker search <name>
+> docker log -f name
+> docker system prune
+>To remove container
+$docker rm -f web3
+>To remove image
+$docker image rmi -f <container id>
+
+
+$ docker run -idt --name web3 -p 1235:80 -v docker_volume:container \_location apaweb:v1
+$ docker build -t name:tag -f <dockerfile name> .
+
+> to share folder in container from host machine(docker volume)
+$docker run -itd --name project -p 1234:80 -v /home/ubuntu/devops_project/webcode:/var/www/html   -v /home/ubuntu/devops_project/webbackend:/var/www/cgi-bin apache/docker:projectv1
+
+>restart docker container always when the machine start
+$docker update namenode --restart always
+
+
+
+Hadoop(HDFS)
+>to create network
+$ docker network create myhadoop_br --subnet 192.168.200.0/24
+>to create name node
+$ docker run -itd --name namenode --hostname namenode --network myhadoop_br --ip 192.168.200.100 oraclelinux:8.3
+
+
+

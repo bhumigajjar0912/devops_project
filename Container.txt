@@ -28,6 +28,9 @@ $docker run -itd --name project -p 1234:80 -v /home/ubuntu/devops_project/webcod
 >restart docker container always when the machine start
 $docker update namenode --restart always
 
+>copy file from vm to container
+$docker cp hadoop-3.3.1.tar.gz namenode:/
+
 
 
 Hadoop(HDFS)

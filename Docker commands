@@ -1,0 +1,6 @@
+Remove a container
+~  docker rm -f <conainername>
+
+Remove all stopped container
+~  docker container prune -f
+
